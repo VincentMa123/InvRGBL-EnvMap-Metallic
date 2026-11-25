@@ -11,13 +11,13 @@ Original project: [code](https://github.com/cxx226/InvRGBL) · [paper](https://a
 All our changes: [diff since the original](https://github.com/VincentMa123/InvRGBL-EnvMap-Metallic/compare/bf6b62e...main)
 
 ## What we added
-| Change | Description | Main files|
-|---|---|---|---|
+| Change | Description | Main files |
+|---|---|---|
 | Environment-map lighting | Learnable environment map, split into diffuse and specular maps | `models/modules_envmap.py`, `models/trainers/pbr.py` |
 | Metallic material | Metallic parameter added to the physically based shading | `models/gaussians/relightgs.py`, `models/trainers/pbr.py` |
 | Shadows | Shadow-map visibility in place of BVH ray tracing; OBB-based shadow handling | `models/trainers/base.py`, `tools/visualize_shadow_map.py` |
-| Training speed | Fixed slow training caused by visibility updates | `models/trainers/base.py`, `models/video_utils.py` | 
-| Material fixes | Fixes to reflectivity, sun visibility, albedo and the environment map | `models/trainers/base.py`, `models/nodes/relight_rigid.py` | 
+| Training speed | Fixed slow training caused by visibility updates | `models/trainers/base.py`, `models/video_utils.py` |
+| Material fixes | Fixes to reflectivity, sun visibility, albedo and the environment map | `models/trainers/base.py`, `models/nodes/relight_rigid.py` |
 | LiDAR intensity look-up table | Intensity look-up table for Waymo LiDAR, with verification and a report | `tools/custom/build_waymo_intensity_lut.py`, `tests/verify_waymo_intensity_lut.py`, `docs/LiDARIntensityReport.pdf` |
 | Image priors and SAM regions | Image priors (normals, RGB↔X) and SAM region maps for reflectivity | `tools/custom/extract_image_priors.py`, `tools/custom/run_rgbx_batch.py`, `tools/precompute_reflectivity_sam_regions.py` |
 | Relighting and night scenes | Relighting script with streetlights and headlights; spotlight configs and ablations | `tools/relight.py`, `configs/spotlights_023_*.json`, `relight_023_*.sbatch` |
